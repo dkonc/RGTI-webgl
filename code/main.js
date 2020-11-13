@@ -39,7 +39,6 @@ class Application {
         // not change the size of the canvas.
         const canvas = this.canvas;
         const gl = this.gl;
-
         if (canvas.width !== canvas.clientWidth ||
             canvas.height !== canvas.clientHeight)
         {
