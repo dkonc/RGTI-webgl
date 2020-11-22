@@ -78,5 +78,5 @@ class Application {
 // and the canvas element are created.
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.querySelector('canvas');
-const app = new Application(canvas);
+    const app = new Application(canvas);
 });
