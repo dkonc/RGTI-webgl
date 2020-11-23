@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Royal game of Uhr</title>
+    <title>The Royal game of Ur</title>
 
     <link rel="stylesheet" type="text/css" href="../../common/style.css">
 
@@ -10,6 +10,25 @@
     <script type="module" src="17-game.js"></script>
 </head>
 <body>
+<script>
+function Random() {
+  return Math.floor(Math.random() * 5);
+}
+
+function randomValue() {
+  document.getElementById('tb').value = Random();
+}
+</script>
+
+<form style="padding:50px; align:center" name="rn">
+    <input type="text" id="tb" name="tb" />
+    </br>
+
+    </br>
+
+    <a href="#" class="button" onClick="javascript:randomValue()">Vrzi kocko</a>
+</form>
+
     <div class="fullscreen">
         <canvas></canvas>
     </div>
