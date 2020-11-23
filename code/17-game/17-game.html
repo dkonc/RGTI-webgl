@@ -12,22 +12,48 @@
 <body>
 <script>
 function Random() {
-  return Math.floor(Math.random() * 5);
+  let a = Math.floor(Math.random() * 16); //0,15
+    if(a == 0){
+        return 0;
+    }
+    else if(a > 0 && a <= 4){
+        return 1;
+    }
+    else if(a >= 5 && a <= 10){
+        return 2;
+    }
+    else if(a >= 11 && a <= 14){
+        return 3;
+    }
+    else{
+        return 4;
+    }
 }
 
 function randomValue() {
-  document.getElementById('tb').value = Random();
+    let vrednost = Random();
+    console.log(vrednost);
+    let sc = document.getElementById('tb');
+    sc.innerHTML = vrednost;
 }
 </script>
 
-<form style="padding:50px; align:center" name="rn">
+<!--<form style="padding:50px; align:center" name="rn">
     <input type="text" id="tb" name="tb" />
     </br>
 
     </br>
 
     <a href="#" class="button" onClick="javascript:randomValue()">Vrzi kocko</a>
-</form>
+</form> -->
+    <div class="hud-overlay" id="hud-overlayDesna" style="visibility: visible;">
+        <label>Vrednost meta: </label>
+        <label id="tb" value="0">0</label>
+    </div>
+
+    <div>
+        <a href="#" class="hud-overlayButton" onClick="javascript:randomValue()">Vrzi kocko</a>
+    </div>
 
     <div class="fullscreen">
         <canvas></canvas>

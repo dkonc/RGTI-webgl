@@ -114,4 +114,32 @@ span a {
   color: #999;
   text-decoration: underline;
 }
+.hud-overlay{
+    width: 10%;
+    height: 3%;
+    border-radius: 5px;
+    position:absolute;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    padding: 20px;
+    left: 10px;
+    top: 10px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+}
+.hud-overlayButton{
+    width: 10%;
+    height: 3%;
+    border-radius: 5px;
+    position:absolute;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    padding: 20px;
+    left: 10px;
+    top: 85px;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+}
 
