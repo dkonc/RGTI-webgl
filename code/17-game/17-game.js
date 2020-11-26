@@ -46,24 +46,25 @@ class App extends Application {
                 a.push(node);
             }
         });
-
+        //console.log(this.arrayDynamic[0].translation);
         this.camera.aspect = this.aspect;
         this.camera.updateProjection();
         this.renderer.prepare(this.scene);
     }
 
     logika(){
-        sprem += 0.005;
+        sprem += 0.01;
         let x = sprem;
+        let m = this.arrayDynamic[0].translation;
+        let d = this.arrayDynamic[0].transform;
 
         if(x >= 1){
             past = false;
-            let d = this.arrayDynamic[0].transform;
-            mat4.fromTranslation(d, [-3, 0+x, -3.70]);
+            mat4.fromTranslation(d, [m[0], m[1], m[2]+x]);
+            m[0] =
             return;
         }
-        let d = this.arrayDynamic[0].transform;
-        mat4.fromTranslation(d, [-3, 0+x, -3.70]);
+        mat4.fromTranslation(d, [m[0], m[1], m[2]+x]);
     }
 
     enableCamera() {
@@ -96,7 +97,7 @@ class App extends Application {
             this.physics.update(dt);
         }
         window.onkeypress=function(e){
-            if(e.key == "Enter"){
+            if(e.key == "1"){
                 past = true;
             }
         };
