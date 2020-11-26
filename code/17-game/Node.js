@@ -47,6 +47,7 @@ export default class Node {
         }
     }
 
+
     traverse(before, after) {
         before && before(this);
         for (let child of this.children) {
@@ -58,6 +59,7 @@ export default class Node {
 }
 
 Node.defaults = {
+    name: "unknown",
     translation: [0, 0, 0],
     rotation: [0, 0, 0],
     scale: [1, 1, 1],

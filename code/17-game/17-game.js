@@ -6,10 +6,15 @@ import Camera from './Camera.js';
 import SceneLoader from './SceneLoader.js';
 import SceneBuilder from './SceneBuilder.js';
 
+const mat4 = glMatrix.mat4;
+let past = false;
+let sprem = 0;
+
 class App extends Application {
 
     start() {
         const gl = this.gl;
+
 
         this.renderer = new Renderer(gl);
         this.time = Date.now();
@@ -27,18 +32,38 @@ class App extends Application {
         const builder = new SceneBuilder(scene);
         this.scene = builder.build();
         this.physics = new Physics(this.scene);
+        this.arrayDynamic = [];
+        let a = this.arrayDynamic;
 
         // Find first camera.
         this.camera = null;
+
         this.scene.traverse(node => {
             if (node instanceof Camera) {
                 this.camera = node;
+            }
+            if(node.name == "coin"){
+                a.push(node);
             }
         });
 
         this.camera.aspect = this.aspect;
         this.camera.updateProjection();
         this.renderer.prepare(this.scene);
+    }
+
+    logika(){
+        sprem += 0.005;
+        let x = sprem;
+
+        if(x >= 1){
+            past = false;
+            let d = this.arrayDynamic[0].transform;
+            mat4.fromTranslation(d, [-3, 0+x, -3.70]);
+            return;
+        }
+        let d = this.arrayDynamic[0].transform;
+        mat4.fromTranslation(d, [-3, 0+x, -3.70]);
     }
 
     enableCamera() {
@@ -60,6 +85,7 @@ class App extends Application {
     update() {
         const t = this.time = Date.now();
         const dt = (this.time - this.startTime) * 0.001;
+
         this.startTime = this.time;
 
         if (this.camera) {
@@ -69,11 +95,21 @@ class App extends Application {
         if (this.physics) {
             this.physics.update(dt);
         }
+        window.onkeypress=function(e){
+            if(e.key == "Enter"){
+                past = true;
+            }
+        };
 
-        //logika
+        if(this.arrayDynamic){
 
+            if(past == true){
+                this.logika();
+            }
+        }
 
     }
+
 
     render() {
         if (this.scene) {

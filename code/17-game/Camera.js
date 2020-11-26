@@ -4,6 +4,9 @@ import Node from './Node.js';
 const mat4 = glMatrix.mat4;
 const vec3 = glMatrix.vec3;
 
+let positionX;
+let positionY;
+
 export default class Camera extends Node {
 
     constructor(options) {
@@ -24,6 +27,7 @@ export default class Camera extends Node {
     }
 
     update(dt) {
+        //this.getPlayerPosition();
         const c = this;
 
         const forward = vec3.set(vec3.create(),
@@ -109,6 +113,11 @@ export default class Camera extends Node {
 
     keyupHandler(e) {
         this.keys[e.code] = false;
+    }
+    getPlayerPosition(){
+        positionX = this.getGlobalTransform()[12];
+        positionY = this.getGlobalTransform()[14];
+        console.log(positionX,positionY);
     }
 
 }

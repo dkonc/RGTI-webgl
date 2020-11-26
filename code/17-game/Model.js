@@ -8,4 +8,5 @@ export default class Model extends Node {
         this.image = image;
     }
 
+
 }
