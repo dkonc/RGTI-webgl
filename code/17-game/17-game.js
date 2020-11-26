@@ -9,6 +9,8 @@ import SceneBuilder from './SceneBuilder.js';
 const mat4 = glMatrix.mat4;
 let past = false;
 let sprem = 0;
+//arrayi tarc
+
 
 class App extends Application {
 
@@ -58,10 +60,10 @@ class App extends Application {
         let m = this.arrayDynamic[0].translation;
         let d = this.arrayDynamic[0].transform;
 
-        if(x >= 1){
+        if(x >= 1.05){
             past = false;
             mat4.fromTranslation(d, [m[0], m[1], m[2]+x]);
-            m[0] =
+            //m[2] = m[2] + x;
             return;
         }
         mat4.fromTranslation(d, [m[0], m[1], m[2]+x]);
@@ -96,6 +98,7 @@ class App extends Application {
         if (this.physics) {
             this.physics.update(dt);
         }
+
         window.onkeypress=function(e){
             if(e.key == "1"){
                 past = true;
