@@ -38,9 +38,11 @@ a.back:hover {
     background: #ddd;
 }
 
-        h2 {text-align: center; color:white; font-size:86px; font-family:Charcoal, sans-serif;}
-        h3 {text-align: center; font-size:24px;color:white;}
-        .button {  display: inline-block;
+h2 {text-align: center; color:white; font-size:86px; font-family:Charcoal, sans-serif;}
+h3 {text-align: center; font-size:24px;color:white;}
+p {text-align: center; font-size:24px;color:white;}
+
+.button {  display: inline-block;
   padding: .75rem 1.25rem;
   border-radius: 10rem;
   color: #fff;
