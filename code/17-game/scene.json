@@ -585,7 +585,7 @@
         "min": [-0.5, -0.1, -1],
         "max": [1, 0.1, 1]
       },
-      "translation": [-2, 0, -7.3],
+      "translation": [-2,0,-7.3],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1]
     },
@@ -679,6 +679,30 @@
       "translation": [2, 0, -6.5],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1]
+    },
+    {
+      "type": "model",
+      "mesh": 0,
+      "texture": 16,
+      "aabb": {
+        "min": [-0.5, -0.1, -1],
+        "max": [1, 0.1, 1]
+      },
+      "translation": [-4, -1.05, -6.85],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    {
+      "type": "model",
+      "mesh": 0,
+      "texture": 16,
+      "aabb": {
+        "min": [-0.5, -0.1, -1],
+        "max": [1, 0.1, 1]
+      },
+      "translation": [4, -1.05, -6.85],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1]
     }
   ],
   "textures": [
@@ -697,7 +721,8 @@
     "../../common/images/tekstura1blue.png",
     "../../common/images/tekstura2blue.png",
     "../../common/images/tekstura3blue.png",
-    "../../common/images/tekstura4blue.png"
+    "../../common/images/tekstura4blue.png",
+    "../../common/images/plata.png"
   ],
   "meshes": [
     "../../common/models/cube.json",

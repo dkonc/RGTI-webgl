@@ -126,7 +126,21 @@ span a {
     left: 10px;
     top: 10px;
     color: white;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(204, 0, 0,0.8);
+}
+.hud-overlayB{
+    width: 10%;
+    height: 3%;
+    border-radius: 5px;
+    position:absolute;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    padding: 20px;
+    left: 250px;
+    top: 10px;
+    color: white;
+    background-color: rgba(0, 0, 204,0.5);
 }
 .hud-overlayButton{
     width: 10%;
@@ -142,4 +156,61 @@ span a {
     color: white;
     background-color: rgba(0,0,0,0.8);
 }
-
+.hud-overlayButtonB{
+    width: 10%;
+    height: 3%;
+    border-radius: 5px;
+    position:absolute;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    padding: 20px;
+    left: 250px;
+    top: 85px;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+}
+.hud-overlayButtonC{
+    width: 10%;
+    height: 1.5%;
+    font-size: medium;
+    border-radius: 5px;
+    position:absolute;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    padding: 20px;
+    left: 10px;
+    top: 155px;
+    color: white;
+    background-color: rgba(0,0,180,0.5);
+}
+.hud-overlayButtonD{
+    width: 10%;
+    height: 1.5%;
+    font-size: medium;
+    border-radius: 5px;
+    position:absolute;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    padding: 20px;
+    left: 250px;
+    top: 155px;
+    color: white;
+    background-color: rgba(180,0,0,0.5);
+}
+.hud-overlayC{
+    width: 27%;
+    height: 45%;
+    border-radius: 5px;
+    position:absolute;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    padding: 20px;
+    left: 5px;
+    top: 5px;
+    color: white;
+    background-color: rgba(196, 196, 196,0.7);
+}

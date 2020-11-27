@@ -36,15 +36,52 @@ function randomValue() {
     let sc = document.getElementById('tb');
     sc.innerHTML = vrednost;
 }
+function randomValue2(){
+    let vrednost = Random();
+    console.log(vrednost);
+    let sc = document.getElementById('tb2');
+    sc.innerHTML = vrednost;
+}
 
 </script>
+    <div class="hud-overlayC" id="hud-overlayDesna2" style="visibility: visible;"></div>
     <div class="hud-overlay" id="hud-overlayDesna" style="visibility: visible;">
         <label>Vrednost meta: </label>
         <label id="tb" value="0">0</label>
     </div>
-
+    <div class="hud-overlayB" id="hud-overlayDesna2" style="visibility: visible;">
+        <label>Vrednost meta: </label>
+        <label id="tb2" value="0">0</label>
+    </div>
+    <div>
+        <a href="#" id="elim_b1" class="hud-overlayButtonC">Eliminiraj Blue 1</a>
+    </div>
+    <div>
+        <a href="#" id="elim_b2" class="hud-overlayButtonC" style="top: 210px">Eliminiraj Blue 2</a>
+    </div>
+    <div>
+        <a href="#" id="elim_b3" class="hud-overlayButtonC" style="top: 266px">Eliminiraj Blue 3</a>
+    </div>
+    <div>
+        <a href="#" id="elim_b4" class="hud-overlayButtonC" style="top: 322px">Eliminiraj Blue 4</a>
+    </div>
+    <div>
+        <a href="#" id="elim_r1" class="hud-overlayButtonD">Eliminiraj Red 1</a>
+    </div>
+    <div>
+        <a href="#" id="elim_r2" class="hud-overlayButtonD" style="top: 210px">Eliminiraj Red 2</a>
+    </div>
+    <div>
+        <a href="#" id="elim_r3" class="hud-overlayButtonD" style="top: 266px">Eliminiraj Red 3</a>
+    </div>
+    <div>
+        <a href="#" id="elim_r4" class="hud-overlayButtonD" style="top: 322px">Eliminiraj Red 3</a>
+    </div>
     <div>
         <a href="#" class="hud-overlayButton" id="vrziKocko" onClick="javascript:randomValue()">Vrzi kocko</a>
+    </div>
+    <div>
+        <a href="#" class="hud-overlayButtonB" onClick="javascript:randomValue2()">Vrzi kocko</a>
     </div>
     <div class="fullscreen">
         <canvas></canvas>
