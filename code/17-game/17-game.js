@@ -285,10 +285,12 @@ class App extends Application {
 
 
         if(rdecCilj[0] == 1 && rdecCilj[1] == 1 && rdecCilj[2] == 1 && rdecCilj[3] == 1){
-            alert("Zmagal je rdeči igralec!");
+            location.href='index.html';
+            confirm("Zmagal je RDEČI igralec! Klikni na OK, da se vrneš na glavni meni");
         }
         if(modriCilj[0] == 1 && modriCilj[1] == 1 && modriCilj[2] == 1 && modriCilj[3] == 1){
-            alert("Zmagal je modri igralec!");
+            location.href='index.html';
+            confirm("Zmagal je MODRI igralec! Klikni na OK, da se vrneš na glavni meni");
         }
 
         if(this.arrayDynamic){
