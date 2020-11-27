@@ -187,6 +187,21 @@ span a {
     color: white;
     background-color: rgba(0,0,180,0.5);
 }
+.hud-overlayButtonE{
+    width: 10%;
+    height: 1.5%;
+    font-size: medium;
+    border-radius: 5px;
+    position:absolute;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    padding: 20px;
+    right: 17px;
+    top: 60px;
+    color: white;
+    background-color: rgba(180,180,180,1);
+}
 .hud-overlayButtonD{
     width: 10%;
     height: 1.5%;

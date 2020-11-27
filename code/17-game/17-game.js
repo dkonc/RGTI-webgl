@@ -73,6 +73,12 @@ class App extends Application {
         this.startTime = this.time;
         this.aspect = 1;
 
+        document.getElementById("play_music").addEventListener("click",function() {
+            let track = new Audio();
+            track.src = "../../common/music/Ancient_Babylon.mp3";
+            track.volume = 0.05;
+            track.play();
+        });
         this.pointerlockchangeHandler = this.pointerlockchangeHandler.bind(this);
         document.addEventListener('pointerlockchange', this.pointerlockchangeHandler);
 

@@ -12,27 +12,31 @@
        location.href='index.html';
     };
 </script>>
-<h3>Kraljeva igra Ur je predhodnik namiznih iger, kot so Backgammon in Clovek ne jezi se. <br> Igra se igra z dvema setoma 4 zetonov (rdeci in modri) in 4 tetraedricnimi kockami.
+<h3>Kraljeva igra Ur je predhodnik namiznih iger, kot so Backgammon in Clovek ne jezi se. <br> Igra se igra z dvema setoma 4 zetonov (rdecimi in modrimi) in 4 tetraedricnimi kockami.
+    <br>Slednje so v nasem primeru le funkcionalno prisotne preko podane binomske porazdelitve.<br>
     Igralna deska je sestavljena iz treh pravokotnih kosov.<br>
     <br>
     Igralec vrze 4 tetraedricne kocke, ko je na potezi. Vsaka kocka ima 2 vrhova obarvana. <br>
-    Stevilo obarvanih vrhov doloca stevilo premikov.<br>
+    Stevilo navzgor obarvanih vrhov doloca stevilo premikov.<br>
     Zaradi nenavadnih kock je porazdeliev verjetnosti binomska (2 je najpogostejsa vrednost).<br>
     Cilj je spraviti vse 4 zetone cez pot.
     <BR>
     <BR>
 </h3>
 <h4 style="text-align: center; font-size:44px;color:white;">
-KONTROLE
+NADZOR NAD TIPKAMI
 </h4>
 
 <h3>
-    Igralec na potezi se lahko premika s tipkami WASD.<BR>
-    Ko je na potezi, lahko pritisne gumb "Vrzi kocko", ki bo simuliral met kock. Prikazalo se bo stevilo tock.<BR>
-    Glede na stevilo tock lahko premakne poljubno figuro za toliko stevilo mest.<BR>
-    Rdeci ima na voljo figuro 1, 2, 3 in 4. Modri ima na voljo figuro 5, 6, 7 in 8. <BR>
-    En pritisk na gumb z enako stevilko simulira 1 premik figure. <BR>
-    Npr. ce je oseba vrgla 2., lahko premakne katerokoli figuro za 2 mesti s tem, da pritisne gumb figure 2x.<BR>
+    Igralec priklice figuro na igralno polje s pritiskom na stevilko zetona.<BR>
+    Denimo, da 1. igralec zeli postaviti figuro 1 na igralno polje. To stori s pritiskom na 1.<BR>
+    Z nadaljnim pritiskom premakne figuro za 1 polje.<br>
+    Igralec lahko nadzoruje kamero s tipkami WASD.<BR>
+    Ko je igralec na potezi, lahko pritisne gumb "Vrzi kocko", ki bo simuliral met prej omenjenih tetraedricnihkock.<br> Prikazalo se bo stevilo pik.<BR>
+    Glede na stevilo pik lahko premakne poljubno figuro za toliksno stevilo mest.<BR>
+    Rdeci igralec ima na voljo figure, katere nadzoruje s tipkami 1, 2, 3 in 4. <BR>
+    Modri igralec ima na voljo figure, katere nadzoruje s tipkami 5, 6, 7 in 8. <BR>
+    Primer: Ce je oseba pri metu kocke dobila vrednost 2, lahko premakne katerokoli figuro za 2 mesti s tem, da pritisne gumb figure 2x.<BR>
 
 </h3>
 <h4 style="text-align: center; font-size:44px;color:white;">
@@ -40,13 +44,20 @@ POTEK IGRE
 </h4>
 <h3>
 Zacne prvi igralec (rdece figure). <BR>
-Pritisne gumb "Vrzi kocko", ki mu pove, koliko je vrgel. <BR>
-Izbere eno od figur (1-4), ki jo premakne za toliko mest, s pritiskom primernega gumba (1-4) tolikokrat, kolikor je vrgel. <BR>
+Pritisne gumb "Vrzi kocko", ki mu pove vrednost meta. <BR>
+Izbere eno od figur (1-4), ki jo premakne za toliko mest, s pritiskom primernega gumba (1-4), kolikor je vrgel. <BR>
 Cilj je priti do konca poti z vsemi stirimi figurami pred drugim igralcem. <BR>
 Po metu kocke in premiku je na vrsti drugi igralec. <BR>
 Pritisne gumb "Vrzi kocko", ki mu pove, koliko je vrgel. <BR>
-Premakne figuro. Ce pride na polje, ki je ze okupirano z rdeco figuro, jo "poje" (postavi na zacetno pozicijo).
-Poteze se izmenjujejo, dokler nekdo ne spusti vseh figur cez igralno polje.
+Premakne figuro. Ce pride na polje, ki je ze okupirano z rdeco figuro (ali obratno), jo izloci (postavi izven igralnega polja).<BR>
+Poteze se izmenjujejo, dokler nekdo ne premakne vseh figur skozi igralno polje na cilj.
+</h3>
+<h4 style="text-align: center; font-size:44px;color:white;">
+    POSEBNOSTI
+</h4>
+<h3>
+    Ce igralec pristane na katerokoli rozeto, mece ponovno.<br>
+    Rozeta na "vojni pisti" predstavlja varno obmocje in ponovni met.
 </h3>
 
 <div class="container">

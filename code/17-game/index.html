@@ -7,8 +7,17 @@
 </head>
 <body style="background-color:black">
 <h2> THE ROYAL GAME OF UR</h2>
-<h3> Welcome to the student-made Royal game of Ur. Please go easy on us.</h3>
+<h3> Welcome to the student-made Royal game of Ur.</h3>
 <script>
+    window.onclick = function(){
+        if(a == true){
+            let track = new Audio();
+            track.src = "../../common/music/Ancient_Babylon.mp3";
+            track.volume = 0.05;
+            track.play();
+            a = false;
+        }
+    };
     function kliknil(){
        location.href='17-game.html';
     };
