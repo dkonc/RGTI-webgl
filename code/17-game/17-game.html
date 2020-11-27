@@ -36,6 +36,7 @@ function randomValue() {
     let sc = document.getElementById('tb');
     sc.innerHTML = vrednost;
 }
+
 </script>
     <div class="hud-overlay" id="hud-overlayDesna" style="visibility: visible;">
         <label>Vrednost meta: </label>
@@ -43,7 +44,7 @@ function randomValue() {
     </div>
 
     <div>
-        <a href="#" class="hud-overlayButton" onClick="javascript:randomValue()">Vrzi kocko</a>
+        <a href="#" class="hud-overlayButton" id="vrziKocko" onClick="javascript:randomValue()">Vrzi kocko</a>
     </div>
     <div class="fullscreen">
         <canvas></canvas>
