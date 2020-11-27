@@ -9,8 +9,10 @@ import SceneBuilder from './SceneBuilder.js';
 const mat4 = glMatrix.mat4;
 let past = false;
 let sprem = 0;
-//arrayi tarc
-
+//arrayi polj
+let fig1 = -1; //da zacne z 0 (glede na indekse polj)
+//
+let pCoord1 = [-1.1, 0.2, -5.3];
 
 class App extends Application {
 
@@ -57,16 +59,27 @@ class App extends Application {
     logika(){
         sprem += 0.01;
         let x = sprem;
-        let m = this.arrayDynamic[0].translation;
         let d = this.arrayDynamic[0].transform;
 
-        if(x >= 1.05){
-            past = false;
-            mat4.fromTranslation(d, [m[0], m[1], m[2]+x]);
-            //m[2] = m[2] + x;
+        if(fig1 == 12 && x <= 1.1){
+            mat4.fromTranslation(d,[d[12], d[13], d[14]+0.01]);
+        }
+        else if(fig1 == 11 && x <= 1.1){
+            mat4.fromTranslation(d,[d[12]-0.01, d[13], d[14]]);
+        }
+        else if(fig1 >= 4 && fig1 < 11 && x <= 1.1){
+            mat4.fromTranslation(d,[d[12], d[13], d[14]-0.01]);
+        }
+        else if(fig1 == 3 && x <= 1.1){
+            mat4.fromTranslation(d,[d[12]+0.01, d[13], d[14]]);
+        }
+        else if(x <= 1.1){
+            mat4.fromTranslation(d,[d[12], d[13], d[14]+0.01]);
+        }
+        else{
             return;
         }
-        mat4.fromTranslation(d, [m[0], m[1], m[2]+x]);
+
     }
 
     enableCamera() {
@@ -101,6 +114,8 @@ class App extends Application {
 
         window.onkeypress=function(e){
             if(e.key == "1"){
+                fig1++;
+                sprem = 0;
                 past = true;
             }
         };
